@@ -9,11 +9,11 @@ exports.handler = (event, context, callback) => {
   // body: '{"content":"hello","sourceLang":"en","targetLang":"en"}'
 
   let params = {
-    SourceLanguageCode: payload.sourceLang,
+    SourceLanguageCode: payload.sourceLanguageCode,
     /* required */
-    TargetLanguageCode: payload.targetLang,
+    TargetLanguageCode: payload.targetLanguageCode,
     /* required */
-    Text: payload.content,
+    Text: payload.text,
     /* required */
     TerminologyNames: payload.terminologyNames
   };
