@@ -25,11 +25,11 @@ exports.handler = (event, context, callback) => {
 
       if (error) {
         console.log(error);
-        callback(null, { "statusCode": 500, headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }, "body": JSON.stringify((error)) });
+        callback(null, { "statusCode": 500, headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*", "Access-Control-Allow-Methods": "*" }, "body": JSON.stringify((error)) });
       }
       else {
         console.log('respoonse ' + JSON.stringify(response));
-        callback(null, { "statusCode": 200, headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }, "body": JSON.stringify((response)) });
+        callback(null, { "statusCode": 200, headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*", "Access-Control-Allow-Methods": "*"  }, "body": JSON.stringify((response)) });
       }
     }
 
